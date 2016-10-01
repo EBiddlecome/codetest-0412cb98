@@ -16,16 +16,24 @@
 //*** may add this later 
 
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+{ 
+	"title": "Task Schema",
+	"type": "object",
 
-var TaskSchema = new Schema({
+	"properties": {
 
-  taskNumber: Number,
-  complete: String,
-  name: String,
-  description: String,
-  
-});
-
-module.exports = mongoose.model('Task', TaskSchema);
+		"taskNumber": {
+			"type": "number"
+		},
+		"complete": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		},
+		"description": {
+		  "type": "string"
+		}
+	},
+	"required": ["name", "description"]
+}
