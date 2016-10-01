@@ -1,5 +1,8 @@
-{
+{ 
+	"name": "sudoit",
+  "main": "server.js",
   "devDependencies": {
+    "body-parser": "^1.15.2",
     "chai": "^3.5.0",
     "express": "^4.14.0",
     "mocha": "^3.1.0"
