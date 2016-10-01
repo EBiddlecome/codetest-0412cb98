@@ -28,7 +28,7 @@ router.route('/list')
       if (err) {
         return err;
       }
-      res.json(list);   
+      res.json({list});   
     });
   });
 
