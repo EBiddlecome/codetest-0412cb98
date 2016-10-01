@@ -1,7 +1,7 @@
-// The `Task` Mongoose model handles an object with the following properties:
+// The `Task` schema handles an object with the following properties:
 
 
-//'taskNumber' - position of task in the list
+//'number' - number position of task in the list
 //(user should be able to reorder a task in the task list)
 
 //'complete' - is the task complete or not?
@@ -16,24 +16,4 @@
 //*** may add this later 
 
 
-{ 
-	"title": "Task Schema",
-	"type": "object",
-
-	"properties": {
-
-		"taskNumber": {
-			"type": "number"
-		},
-		"complete": {
-			"type": "string"
-		},
-		"name": {
-			"type": "string"
-		},
-		"description": {
-		  "type": "string"
-		}
-	},
-	"required": ["name", "description"]
-}
+{ "Type" : "Task","complete": "string", "name": "string", "description": "string" }
