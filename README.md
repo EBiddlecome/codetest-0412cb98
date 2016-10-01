@@ -5,6 +5,6 @@
 
 ###### Installing Dependencies
 
-###### Exploring the demo
+###### Exploring the Demo
 
-###### Running Tests
+###### Running the Tests
