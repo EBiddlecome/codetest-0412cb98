@@ -24,4 +24,5 @@ router.get('/', function(req, res) {
 app.use('/tasks', router);
 app.listen(port);
 
+//display notice in terminal when server running
 console.log('SuDoIt Server running on port ' + port);
