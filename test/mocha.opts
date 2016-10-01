@@ -1,5 +1,6 @@
 --require should
 --require expect
 --reporter spec
+--require jsdom-global/register
 --ui bdd
 --recursive

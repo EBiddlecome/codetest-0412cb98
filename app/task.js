@@ -1,19 +1,73 @@
-// The `Task` schema handles an object with the following properties:
+var localStorage = require('localStorage');
+
+  var List = function () {
+    var taskList = new Array;
+    var taskData = localStorage.getItem('task');
+
+    if (taskData != null) {
+      taskList = JSON.parse(taskData); 
+    }
+    return taskList;
+  };
+
+  var Add = function () {
+
+    var task = document.getElementById('task').value;
+    var taskList = List();
+
+    taskList.push(task);
+    localStorage.setItem('task', JSON.stringify(taskList));
+
+    View();
+
+    return false;
+  };
+
+  // var remove = function () {
+
+  //   var id = this.getAttribute('id');
+  //   var tasks = list();
+
+  //   tasks.splice(id, 1);
+  //   localStorage.setItem('task', JSON.stringify(tasks));
+
+  //   view();
+
+  //   return false;
+  // };
 
 
-//'number' - number position of task in the list
-//(user should be able to reorder a task in the task list)
+  var View = function () {
 
-//'complete' - is the task complete or not?
-//(user should be able to mark a task in the list as completed)
+    var taskList = List();
+    var html = '<ul>';
 
-//'name' - name of the task
-//(user should be able to edit the name of a task in the task list)
+    if ('tasks' == null) {
+      return 'Nothing To Do Yet'; 
+    } else {
 
-//'description' - description of the task
+      for (var i = 0; i < taskList.length; i++) {
+        html += '<li>' + taskList[i] + '<button class="remove" id="' + i + '">x</button></li>';
+      }
 
-//*** 'priority level' - urgency of task
-//*** may add this later 
+      html += '</ul>';
+
+      document.getElementById('tasks').innerHTML = html;
+
+      var buttons = document.getElementsByClassName('remove');
+
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', remove);
+      }
+
+      document.getElementById('add').addEventListener('click', add);
+    }
+  };  
+
+View();
 
 
-{ "Type" : "Task","complete": "string", "name": "string", "description": "string" }
+
+
+
+

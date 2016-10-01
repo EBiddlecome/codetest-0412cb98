@@ -15,11 +15,33 @@ var router = express.Router();
 // test route to see if working
 // accessed at GET http://localhost:8080/tasks
 
-router.get('/', function(req, res) {
+router.get('/', function(req, res, next) {
   res.json(
-		{ message: 'Router functional' }
+		{ message: 'HAI!' }
 	);   
 });
+
+router.route('/list')
+
+  .get(function(req, res) {
+    list.view(function(err, list) {
+      if (err) {
+        return err;
+      }
+      res.json(list);   
+    });
+  });
+
+router.route('/list')
+
+  .post(function(req, res) {
+    task.add(function(req, res) {
+      if (err) {
+        return err;
+      }
+      res.json({ message: 'Task created!' });
+    });
+  });
 
 app.use('/tasks', router);
 app.listen(port);
