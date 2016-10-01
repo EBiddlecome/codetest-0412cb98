@@ -14,5 +14,5 @@ describe('loading server', function () {
     console.log('test 404');
     server.get('/foo/bar')
       .expect(404, done);
-    });
+  });
 });

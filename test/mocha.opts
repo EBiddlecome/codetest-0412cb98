@@ -1,4 +1,5 @@
 --require should
+--require expect
 --reporter spec
 --ui bdd
 --recursive
