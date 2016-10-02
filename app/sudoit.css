@@ -25,12 +25,20 @@ ol {
 }
 
 ol li {
-    cursor: pointer;
+    cursor: cell;
     position: relative;
     padding: 12px 8px 12px 40px;
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
+}
+
+ol li:nth-child(odd) {
+    background: lightgrey;
+}
+
+ol li:hover {
+    background: #ddd;
 }
 
 /* on task click, change color and strike out text */
