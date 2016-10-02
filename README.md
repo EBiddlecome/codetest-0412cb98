@@ -1,7 +1,7 @@
-# suDoIt
+# SuDoIt
 
 
-## SuperUser Do It!
+## SuperUserDo It!
 
 
 
@@ -9,9 +9,15 @@
 
 
 
-Here's an application to track your team members' tasks.  
+#### Here's an application to track your team members' tasks.  
 
-It's ~~intuitive, elegant, and fun to use!~~ still in development
+#### It's intuitive, elegant, and fun to use! 
+
+
+
+This TDD/BDD implementation is super lightweight, and stores your task list in the current browser cache only.
+
+(And it's still in development!)
 
 
 
@@ -20,33 +26,23 @@ It's ~~intuitive, elegant, and fun to use!~~ still in development
 
 #### Exploring the Demo & Running the Tests
 
-###### Mocha + Chai
+###### Bower, Mocha + Chai
 
 
 
+Navigate to the root of the project directory, and run:
 
-Are you an npm user? Of course you are!
-
-
-
-Simply navigate to the root of the project directory, and run:
-
-  npm install
-
-  nodemon app/server.js
+  bower install
 
 
 
+Open the following file in browser for demo:
 
-OR, if you're not a nodemon fan:
-
-  node app/server.js
-
+  ./app/index.html
 
 
 
-In a separate instance of Terminal, navigate to project's root and run:
+To run the tests, simply open the following file in browser:
 
-  npm test
-
+  ./test/index.html
 
