@@ -1,0 +1,19 @@
+{
+  "name": "sudoinit",
+  "homepage": "https://github.com/EBiddlecome/codetest-0412cb98",
+  "authors": [
+    "EBiddlecome <elizabethwbiddlecome@gmail.com>"
+  ],
+  "description": "vanillatasker",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
